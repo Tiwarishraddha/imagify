@@ -7,6 +7,7 @@ const Navbar = () => {
     const {user} = useContext(AppContext)
     
     const navigate = useNavigate()
+    
   return (
     <div className='flex items-center justify-between py-4'>
       <Link to='/'>
@@ -14,10 +15,11 @@ const Navbar = () => {
       </Link>
 
       <div className='flex items-center gap-2 sm:gap-3'>
+
         { user?
 
         <div className='flex justify-between'>
-            <button className='flex items-center gap-2 bg-blue-100
+            <button onClick={()=>navigate('/buy')} className='flex items-center gap-2 bg-blue-100
             px-4 sm:px-6 py-1.5 sm:py-3 rounded-full hover:scale-105 transition-all duration-700'>
                 <img className='w-5' src={assets.credit_star} alt=""/>
                 <p className='text-xs sm:text-sm font-medium text-gray-600'>
@@ -25,7 +27,9 @@ const Navbar = () => {
                 </p>
             </button>
 
-            <p className='text-gray-600 max-sm:hidden pt-3 '>Hi, GreatStack</p>
+            <p className='text-gray-600 max-sm:hidden pt-3 '>
+              Hi, GreatStack
+            </p>
 
             <div className='relative group'>
 
@@ -47,9 +51,15 @@ const Navbar = () => {
         :
 
         <div className='flex items-center gap-2 sm:gap-5'>
-            <p onClick={()=>navigate('/buy')} className='cursor-pointer'>Pricing</p>
+            <p onClick={()=>navigate('/buy')} className='cursor-pointer'>
+              Pricing
+            </p>
+
             <button className='bg-zinc-800 text-white px-7 py-2 
-            sm:px-10 text-sm rounded-full'>Login</button>
+            sm:px-10 text-sm rounded-full'>
+              Login
+            </button>
+
         </div>
 
         }
