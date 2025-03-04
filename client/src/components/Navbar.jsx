@@ -19,8 +19,9 @@ const Navbar = () => {
         { user?
 
         <div className='flex justify-between'>
+          <div className='flex justify-between gap-1.5'>
             <button onClick={()=>navigate('/buy')} className='flex items-center gap-2 bg-blue-100
-            px-4 sm:px-6 py-1.5 sm:py-3 rounded-full hover:scale-105 transition-all duration-700'>
+            px-2 sm:px-6 py-1.5 sm:py-3 rounded-full hover:scale-105 transition-all duration-700'>
                 <img className='w-5' src={assets.credit_star} alt=""/>
                 <p className='text-xs sm:text-sm font-medium text-gray-600'>
                     Credits left : 50
@@ -30,6 +31,7 @@ const Navbar = () => {
             <p className='text-gray-600 max-sm:hidden pt-3 '>
               Hi, GreatStack
             </p>
+            </div>
 
             <div className='relative group'>
 
