@@ -13,7 +13,7 @@ const Footer = () => {
             Copyright @GreatStack.dev | All right reserved.
         </p>
 
-        <div className='flex gap-[2.5]'>
+        <div className='flex gap-2'>
 
         <img src={assets.facebook_icon} alt="" width={35}/>
 

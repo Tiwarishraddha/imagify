@@ -16,8 +16,8 @@ const Navbar = () => {
 
             <div className='flex items-center gap-2 sm:gap-3'>
                 {user ? (
-                    <div className='flex justify-between'>
-                        <div className='flex justify-between gap-1.5'>
+                    <div className='flex justify-between gap-2'>
+                        <div className='flex justify-between gap-2'>
                             <button onClick={() => navigate('/buy')} className='flex items-center gap-2 bg-blue-100
                                 px-2 sm:px-6 py-1.5 sm:py-3 rounded-full hover:scale-105 transition-all duration-700'>
                                 <img className='w-5' src={assets.credit_star} alt=""/>
@@ -27,7 +27,7 @@ const Navbar = () => {
                             </button>
 
                             <p className='text-gray-600 max-sm:hidden pt-3 '>
-                                Hi, {user.name}
+                                Hi, {user.name.split(' ')[0]}
                             </p>
                         </div>
 
